@@ -174,7 +174,8 @@ class TrackRepository(private val context: Context) {
         }
     }
 
-    private synchronized fun saveTrackToCache(track: MusicTrack) {
+    @Synchronized
+    private fun saveTrackToCache(track: MusicTrack) {
         val current = loadImportedTracks().toMutableList()
         current.removeAll { it.uriString == track.uriString }
         current.add(0, track)
@@ -192,4 +193,3 @@ class TrackRepository(private val context: Context) {
         cacheFile.writeText(gson.toJson(current))
     }
 }
-
