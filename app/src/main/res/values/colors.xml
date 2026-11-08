@@ -1,0 +1,8 @@
+<resources>
+    <color name="gold_primary">#FFD54F</color>
+    <color name="gold_dark">#FF8F00</color>
+    <color name="cyan_accent">#00E5FF</color>
+    <color name="bg_dark">#121316</color>
+    <color name="surface_dark">#1C1E24</color>
+</resources>
+
