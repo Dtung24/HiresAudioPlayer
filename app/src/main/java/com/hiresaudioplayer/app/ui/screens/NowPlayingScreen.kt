@@ -243,7 +243,7 @@ fun NowPlayingScreen(
                     onClick = { player.seekTo((currentPos - 10000).coerceAtLeast(0)) }
                 ) {
                     Icon(
-                        imageVector = Icons.Default.Replay10,
+                        imageVector = Icons.Default.FastRewind,
                         contentDescription = "Rewind 10s",
                         tint = TextPrimary,
                         modifier = Modifier.size(30.dp)
@@ -270,7 +270,7 @@ fun NowPlayingScreen(
                     onClick = { player.seekTo((currentPos + 10000).coerceAtMost(duration)) }
                 ) {
                     Icon(
-                        imageVector = Icons.Default.Forward10,
+                        imageVector = Icons.Default.FastForward,
                         contentDescription = "Forward 10s",
                         tint = TextPrimary,
                         modifier = Modifier.size(30.dp)

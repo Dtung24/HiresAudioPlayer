@@ -268,7 +268,7 @@ fun GoogleDriveScreen(
                         }
                         Spacer(modifier = Modifier.height(4.dp))
                         LinearProgressIndicator(
-                            progress = { prog.percent / 100f },
+                            progress = (prog.percent / 100f).coerceIn(0f, 1f),
                             modifier = Modifier.fillMaxWidth(),
                             color = CyanAccent,
                             trackColor = AudioTrackInactive

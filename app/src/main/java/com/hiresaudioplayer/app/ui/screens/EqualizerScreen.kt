@@ -53,13 +53,7 @@ fun EqualizerScreen(dspManager: DspManager) {
         TabRow(
             selectedTabIndex = selectedTab,
             containerColor = SurfaceDark,
-            contentColor = GoldAccent,
-            indicator = { tabPositions ->
-                TabRowDefaults.SecondaryIndicator(
-                    modifier = Modifier.tabIndicatorOffset(tabPositions[selectedTab]),
-                    color = GoldAccent
-                )
-            }
+            contentColor = GoldAccent
         ) {
             tabs.forEachIndexed { index, title ->
                 Tab(

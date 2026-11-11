@@ -10,7 +10,7 @@ import androidx.compose.ui.unit.sp
 import com.hiresaudioplayer.app.ui.theme.*
 
 enum class AppDestination(val label: String, val icon: ImageVector) {
-    NOW_PLAYING("Playing", Icons.Default.PlayCircleOutline),
+    NOW_PLAYING("Playing", Icons.Default.PlayCircle),
     LIBRARY("Library", Icons.Default.QueueMusic),
     EQUALIZER("Equalizer", Icons.Default.GraphicEq),
     DSP_SETTINGS("192k DSP", Icons.Default.Tune),

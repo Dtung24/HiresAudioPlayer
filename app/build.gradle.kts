@@ -85,6 +85,7 @@ dependencies {
     implementation(libs.media3.ui)
     implementation(libs.okhttp)
     implementation(libs.gson)
+    implementation("androidx.documentfile:documentfile:1.0.1")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

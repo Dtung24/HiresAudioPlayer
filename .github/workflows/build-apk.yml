@@ -25,9 +25,10 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
-      - name: Accept Android SDK Licenses
+      - name: Setup Android SDK Components & Licenses
         run: |
           yes | sdkmanager --licenses || true
+          sdkmanager "platforms;android-35" "build-tools;35.0.0" || true
 
       - name: Ensure Gradle Wrapper Executable
         run: chmod +x gradlew
@@ -39,6 +40,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: AetherHiFi-Debug-APK
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: app/build/outputs/apk/**/*.apk
           if-no-files-found: error
           retention-days: 14
